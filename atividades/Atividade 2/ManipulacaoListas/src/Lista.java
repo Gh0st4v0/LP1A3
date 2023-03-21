@@ -43,7 +43,11 @@ public class Lista {
             throw new RuntimeException("Faltou dinheiro para a compra");
         }
         else if (procurarProduto(nome).preco == preco) {
-            System.out.println(nome +" comprado, não há troco");
+            System.out.println(nome +" comprado, nao ha troco");
+        }
+        else {
+        	double troco = preco - procurarProduto(nome).preco;
+        	System.out.println("comprado, R$"+troco+" de troco a ser devolvido");
         }
     }
 }
